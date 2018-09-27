@@ -36,6 +36,6 @@ ax.plot_surface(xx, yy, z, alpha=0.2)
 
 # and plot the point
 for point in points:
-	ax.scatter(point[0] , point[1] , point[2],  color='green')
+	ax.scatter(*point, color='green')
 
 plt.show()
