@@ -2,7 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-points  = [np.array([1, 1, -1]),np.array([2,0,2]),np.array([5,0,2])]
+points  = np.array([
+	[1, 1, -1],
+	[2,0,2],
+	[5,0,2]])
 normal = np.array([0, 9, 3])
 
 # a plane is a*x+b*y+c*z+d=0
