@@ -16,7 +16,8 @@ d = -points[1].dot(normal)
 xx, yy = np.meshgrid(range(6), range(6))
 
 # calculate corresponding z
-z = (-normal[0] * xx - normal[1] * yy - d) * 1. /normal[2]
+x,y,z = normal
+zz = (-x * xx - y * yy - d) * 1. /z
 
 # plot the surface
 #plt3d = plt.figure().gca(projection='3d')
@@ -32,7 +33,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111,projection='3d')
 
 # plot the surface
-ax.plot_surface(xx, yy, z, alpha=0.2)
+ax.plot_surface(xx, yy, zz, alpha=0.2)
 
 # and plot the point
 for point in points:
